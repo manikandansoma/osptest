@@ -6,11 +6,14 @@ class tenant_create:
 
 	def create_connection(self,auth_url,project,name,password):
 		return connection.Connection(auth_url=auth_url,project=project,name=name,password=password)
+
+	def list_servers(self,conn):
+    print("List Servers:")
+
+    for server in conn.compute.servers():
+        print(server)
 		
 
 obj = tenant_create()
-conn = obj.create_connection("http://centospackstack:5000/v2.0","tata","tata","Root@123")
-try:
-	print conn.compute.list_images()
-except Exception: 
-  pass
+con = obj.create_connection("http://centospackstack:5000/v2.0","tata","tata","Root@123")
+obj.list_servers(con)
