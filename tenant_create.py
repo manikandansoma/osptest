@@ -11,5 +11,5 @@ class tenant_create:
 
 obj = tenant_create("http://centospackstack:5000/v2.0","admin","admin","openstack")			
 conn = obj.cont()
-for user in conn.identity.list_users():
-	print(user)
+for image in conn.compute.images():
+	print(image.name)
