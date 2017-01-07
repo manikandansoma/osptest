@@ -12,5 +12,5 @@ conn = obj.create_connection("http://centospackstack:5000/v2.0","tata","tata","R
 try:
 	for image in conn.compute.images():
 		print(image.name)
-except HTTPException:
+except HTTPException
 
