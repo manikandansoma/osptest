@@ -8,10 +8,9 @@ class tenant_create:
 		return connection.Connection(auth_url=auth_url,project=project,name=name,password=password)
 
 	def list_servers(self,conn):
-    print("List Servers:")
-
-    for server in conn.compute.servers():
-        print(server)
+    	print("List Servers:")
+    	for server in conn.compute.servers():
+    		print(server)
 		
 
 obj = tenant_create()
