@@ -11,7 +11,6 @@ class tenant_create:
 obj = tenant_create()
 conn = obj.create_connection("http://centospackstack:5000/v2.0","tata","tata","Root@123")
 try:
-	for image in conn.compute.images():
-		print(image.name)
+	print conn.compute.list_images():
 except Exception: 
   pass
