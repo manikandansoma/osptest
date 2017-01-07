@@ -9,5 +9,5 @@ class tenant_create:
 
 obj = tenant_create()
 conn = obj.create_connection("http://centospackstack:5000/v2.0","admin","admin","openstack")
-for image in conn.compute.images():
-	print(image.name)
+#for image in conn.compute.images():
+	print(conn)
