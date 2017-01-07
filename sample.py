@@ -1,5 +1,5 @@
 from openstack import connection
-conn = connection.Connection(auth_url="http://10.144.243.143:5000/v2.0",
+conn = connection.Connection(auth_url="http://centospackstack:5000/v2.0",
                              project_name="admin",
                              username="admin",
                              password="openstack")
