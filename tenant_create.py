@@ -12,8 +12,7 @@ class tenant_create:
     	
     	    for server in conn.compute.servers():
     		print(server)
-		
-
+	
 obj = tenant_create()
 con = obj.create_connection("http://centospackstack:5000/v2.0","tata","tata","Root@123")
 obj.list_servers(con)
