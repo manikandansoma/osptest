@@ -1,4 +1,5 @@
 from openstack import connection
+import httplib, urllib
 class tenant_create:
 	def __init__(self):
 		print "Class instantiated"
