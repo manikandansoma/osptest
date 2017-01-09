@@ -7,7 +7,7 @@ class tenant_create:
 	def create_connection(self,auth_url,project,name,password):
 		return connection.Connection(auth_url=auth_url,project=project,name=name,password=password)
 
-	def list_credentials(conn):
+	def list_credentials(self,conn):
     	    print("List Credentials:")
 
     	    for credential in conn.identity.credentials():
