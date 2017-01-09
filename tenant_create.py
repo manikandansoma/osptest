@@ -8,10 +8,10 @@ class tenant_create:
 		return connection.Connection(auth_url=auth_url,project=project,name=name,password=password)
 
 	def list_credentials(conn):
-    	print("List Credentials:")
+    	    print("List Credentials:")
 
-    	for credential in conn.identity.credentials():
-            print(credential)
+    	    for credential in conn.identity.credentials():
+                print(credential)
 
 	def list_servers(self,conn):
     	    print("List Servers:")
