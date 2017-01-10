@@ -7,19 +7,14 @@ class tenant_create:
 	def create_connection(self,auth_url,project,name,password):
 		return connection.Connection(auth_url=auth_url,project=project,name=name,password=password)
 
-	def list_credentials(self,conn):
-    	    print("List Credentials:")
-
-    	    for credential in conn.identity.credentials():
-                print(credential)
-
-	def list_servers(self,conn):
-    	    print("List Servers:")
-    	
-    	    for server in conn.compute.servers():
-    		print(server)
+#	def list_servers(self,conn):
+#    	    print("List Servers:")
+#    	
+#    	    for server in conn.compute.servers():
+#    		print(server)
 	
 obj = tenant_create()
 con = obj.create_connection("http://centospackstack:5000/v2.0","tata","tata","Root@123")
-obj.list_credentials(con)
-obj.list_servers(con)
+#obj.list_servers(con)
+for server in con.compute.servers():
+   print(server)
