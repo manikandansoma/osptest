@@ -1,6 +1,5 @@
 from openstack import connection
-import httplib, urllib
-class tenant_create:
+class TenantCreate:
 	def __init__(self):
 		print "Class instantiated"
 
@@ -13,7 +12,7 @@ class tenant_create:
 #    	    for server in conn.compute.servers():
 #    		print(server)
 	
-	obj = tenant_create()
+	obj = TenantCreate()
 	con = obj.create_connection("http://centospackstack:5000/v2.0","tata","tata","Root@123")
 	#obj.list_servers(con)
 	for server in con.compute.servers():
