@@ -4,7 +4,7 @@ class TenantCreate:
 		print "Class instantiated"
 
 	def create_connection(self,auth_url,project,name,password):
-		return connection.Connection(auth_url=auth_url,project=project,name=name,password=password)
+		return connection.Connection(auth_url,project,name,password)
 
 #	def list_servers(self,conn):
 #    	    print("List Servers:")
